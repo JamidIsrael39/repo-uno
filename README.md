@@ -1,4 +1,4 @@
-# curso_1
+# titulo 1
 Primer repo en curso
 
 ## descripcion
