@@ -66,14 +66,14 @@ def get_division_choice():
 	input_ok = False
 	while not input_ok:
 		print("Las opciones son:")
-		print("\tA o a. Division flotante")
-		print("\tB o b. Division entera")
+		print("\tA Division flotante")
+		print("\tB Division entera")
 		print("-----------------------")
 		user_selection = input("Realiza una seleccion: ")
-		if user_selection in ('A', 'B', 'a', 'b'):
+		if user_selection in ('A', 'B'):
 			input_ok = True
 		else:
-			print('Dato ingresado incorrecto (debe ser A o a o B o b)')
+			print('Dato ingresado incorrecto (debe ser A o B)')
 	print('----------------')
 	return user_selection
 
@@ -110,11 +110,11 @@ if __name__ == '__main__':
 		if menu_choice == '4':
 			print("¿Deseas realizar division flotante o de entero?")
 			division_choice = get_division_choice()
-			if division_choice == 'A' or division_choice == 'a':
+			if division_choice == 'A':
 				n1, n2 = get_float_numbers_from_user()
 				result = divide(n1, n2)
 				print('Resultado:', result)
-			elif division_choice == 'B' or division_choice == 'b':
+			elif division_choice == 'B':
 				n1, n2 = get_numbers_from_user()
 				result = divide_integer(n1, n2)
 				print('Resultado:', result)
