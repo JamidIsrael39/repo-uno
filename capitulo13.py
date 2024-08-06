@@ -23,8 +23,8 @@ def module(x, y):
 	return x % y
 
 def power(x, y):
-	"""Potencia de un numero"""
-	return x ** y
+	"""Potencia de un numero multiplicado por 3"""
+	return 3*x ** y
 
 def check_if_user_has_finished():
 	"""
@@ -52,7 +52,7 @@ def get_operation_choice():
 		print('\t3. Multiplicacion')
 		print('\t4. Division')
 		print('\t5. Modulo')
-		print('\t6. Potencia')
+		print('\t6. Potencia de numero por 3')
 		print('-----------------------')
 		user_selection = input('Realiza una seleccion: ')
 		if user_selection in ('1', '2', '3', '4', '5', '6'):
