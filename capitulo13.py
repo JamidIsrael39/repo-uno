@@ -26,6 +26,13 @@ def power(x, y):
 	"""Potencia de un numero multiplicado por 3"""
 	return 3*x ** y
 
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        res = n * factorial(n - 1)
+        return res
+
 def check_if_user_has_finished():
 	"""
 	Revisa si el usuario quiere finalizar o no
@@ -53,12 +60,13 @@ def get_operation_choice():
 		print('\t4. Division')
 		print('\t5. Modulo')
 		print('\t6. Potencia de numero por 3')
+  		print('\t7. Factorial de un numero')
 		print('-----------------------')
 		user_selection = input('Realiza una seleccion: ')
-		if user_selection in ('1', '2', '3', '4', '5', '6'):
+		if user_selection in ('1', '2', '3', '4', '5', '6', '7'):
 			input_ok = True
 		else:
-			print('Dato ingresado incorrecto (debe ser 1 - 6)')
+			print('Dato ingresado incorrecto (debe ser 1 - 7)')
 	print('---------------')
 	return user_selection
 
