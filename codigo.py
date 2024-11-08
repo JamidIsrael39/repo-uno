@@ -8,3 +8,4 @@ print("Esto es uan modificacion para hacer un pull-request")
 print("Prueba para PR")
 lista = []
 diccionario = {}
+lista2 = ["Puerca", "terry", "bolo"]
