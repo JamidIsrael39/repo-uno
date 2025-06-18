@@ -4,6 +4,13 @@
 
 class Cuenta {
 public:
+
+	//el constructor inicializa el dato miembro nombre con el parámetro nombreCuenta
+	explicit Cuenta(std::string nombreCuenta)
+		: nombre{nombreCuenta} {//inicializador de dato miembro
+	//Cuerpo vacio
+	}
+
 	//funcion miembro que establece el nombre de la cuenta en el objeto
 	void setNombre(std::string nombreCuenta){
 		nombre = nombreCuenta; //almacena el nombre de la cuenta
