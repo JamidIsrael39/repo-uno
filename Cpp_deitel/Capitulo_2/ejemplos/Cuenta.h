@@ -27,7 +27,7 @@ public:
 
 	// regresa función del saldo de la cuenta
 	int getSaldo() const {
-	    return Saldo;
+	    return saldo;
 	}
 
 	// función que establece el nombre
