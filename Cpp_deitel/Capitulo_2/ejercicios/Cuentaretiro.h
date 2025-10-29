@@ -2,15 +2,15 @@
 
 class Cuenta {
 public:
-	Cuenta(std::string nombreCuenta, int saldoInicial, int cantidadRetirada)
+	Cuenta(std::string nombreCuenta, int saldoInicial)//, int cantidadRetirada)
 		: nombre(nombreCuenta){
 	
 		if (saldoInicial > 0){
 			saldo = saldoInicial;
 		}
-		if (cantidadRetirada < saldoInicial){
-			cantidad = cantidadRetirada;
-		}
+		//if (cantidadRetirada < saldoInicial){
+		//	cantidad = cantidadRetirada;
+		//}
 
 	}
 	void deposito(int cantidadDepositada){
@@ -27,15 +27,20 @@ public:
 	std::string getNombre() const{
 		return nombre;
 	}
-	void retiroint(int saldoInicial, int cantidadRetirada){
- 		cantidad = saldoInicial - cantidad;
+	void retiro(int cantidadRetirada){
+ 		if (cantidadRetirada <= saldo){
+			saldo = saldo - cantidadRetirada;
+		}
+		if (cantidadRetirada > saldo){
+			std::cout << "\nLa cantidad retirada excede tu saldo.\n";
+		}
 	}
-	int getRetiro() const{
-		return cantidad;
-	}
+	//int getRetiro() const{
+	//	return cantidad;
+	//}
 private:
 	std::string nombre;
 	int saldo{0};
-	int cantidad{0};
+	//int cantidad{0};
 
 };
